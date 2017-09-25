@@ -1,0 +1,15 @@
+{
+  "userName":"袁朝阳",                      //用户名
+  "logInName":"785908907",                 //登录名
+  "nickName":"木木夕",                     //昵称
+  "gender":"1",                            //1：男， 0：女
+  "birthday":"12.05",                      //生日
+  "createTime":"1477561301180",            //创建时间(时间戳 Date.now())
+  "title":"Web工程师",                     //职位
+  "phone":"18380449935",                   //电话
+  "address":"成都",                         //地址
+  "email":"785908907@qq.com",              //email
+  "entryTime":"1469007770599",             //入职时间(时间戳 Date.now())
+  "department":"w1603",                    //部门
+  "des":"这是袁朝阳的个人信息"              //描述
+}

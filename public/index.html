@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="fragment" content="!">
+    <title>Title</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/ng-table/ng-table.min.css">
+    <link rel="stylesheet" href="stylesheets/singleapp.css">
+</head>
+<body>
+<header class="container-fluid">
+    <nav class="row">
+        <div class="col-md-4 col-sm-8 col-xs-8 logo"></div>
+        <div class="col-md-8 col-sm-12 col-xs-12 hidden-xs hidden-sm">
+            <ul class="list-inline font">
+                <li><a href="/#!/user/signup">注册</a></li>
+                <li><a href="/#!/user/login">登录</a></li>
+                <li><a href="/#!/user/edit">编辑</a></li>
+                <!--<li><a href="/list">列表</a></li>-->
+                <li><a href="/#!/user/userlist">列表</a></li>
+                <li><a href="/#!/user/forgetpwd">忘记密码</a></li>
+                <li><a href="/#!/user/detail">个人信息</a></li>
+            </ul>
+        </div>
+        <div class="hidden-lg hidden-md">
+            <span class="dropdown" role="presentation">
+                <span class="dropdown-toggle glyphicon glyphicon-align-justify" data-toggle="dropdown"></span>
+                <ul class="dropdown-menu" role="menu">
+                <li><a href="/#!/user/signup">注册</a></li>
+                <li><a href="/#!/user/login">登录</a></li>
+                <li><a href="/#!/user/edit">编辑</a></li>
+                <!--<li><a href="/list">列表</a></li>-->
+                <li><a href="/#!/user/userlist">列表</a></li>
+                <li><a href="/#!/user/forgetpwd">忘记密码</a></li>
+                <li><a href="/#!/detail">个人信息</a></li>
+                </ul>
+            </span>
+        </div>
+    </nav>
+</header>
+<div class="top"></div>
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-md-10" style="margin-top: 130px">
+            <div ng-view class="page {{ pageClass }}"></div>
+        </div>
+        <div class="col-md-2" style="margin-top: 130px">
+            <div class=" hidden-print hidden-xs hidden-sm affix">
+                <ul class="bs-docs-sidenav list-unstyled list-group">
+                    <li class="dashboard1"><a href="javascript:;">Dashboard</a></li>
+                    <li class="board1"><a href="javascript:;">board</a></li>
+                    <li class="groups1"><a href="javascript:;">Groups</a></li>
+                    <li class="logout1"><a href="javascript:;">Logout</a></li>
+                    <li class="pages1"><a href="javascript:;">Pages</a></li>
+                    <li class="plugins1"><a href="javascript:;">Plugins</a></li>
+                    <li class="reports1"><a href="javascript:;">Reports</a></li>
+                    <li class="security1"><a href="javascript:;">Security</a></li>
+                    <li class="settings1"><a href="javascript:;">Settings</a></li>
+                    <li class="stats1"><a href="javascript:;">Stassa</a></li>
+                    <li class="themes1"><a href="javascript:;">Themes</a></li>
+                    <li class="users1"><a href="javascript:;">Users</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/angular-route/angular-route.min.js"></script>
+<script src="vendor/angular-animate/angular-animate.min.js"></script>
+<script src="vendor/ng-table/ng-table.min.js"></script>
+<script src="javascripts/signup.js"></script>
+</body>
+</html>

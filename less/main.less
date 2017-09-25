@@ -1,0 +1,68 @@
+.test-bg{
+  //background-image: url("/images/1.jpg");
+  background-image: static("/images/1.jpg");
+  color: red;
+}
+//index.html
+.page{
+  bottom: 0;
+  padding-top: 100px;
+  position: relative;
+  text-align: center;
+  top:0;
+  width: 100%;
+}
+.page h1{font-size: 60px;}
+.page a{margin-top: 50px;}
+.page-detail{background: #00d0bc; color: #00907c;}
+.page-edit{background: #e59400; color: #a55400;}
+.page-forgetpwd{background: #b2dba1; color: #9e0000;}
+.page-signup{background: #4cde4c; color: #9e0000;}
+.page-userlist{background: #ffa6bb; color: #9e0000;}
+.page-login{background: #3A9BFF; color: #9e0000;}
+@keyframes rotateFall {
+  0% {transform: rotateZ(0deg);}
+  20% {transform: rotateZ(10deg); animation-timing-function: ease-out;}
+  40% {transform: rotateZ(17deg);}
+  60% {transform: rotateZ(16deg);}
+  100% {transform: translateY(100%) rotateZ(17deg);}
+}
+
+//slide in form the bottom
+@keyframes slideOutLeft {
+  to {transform: translateX(-100%);}
+}
+
+//rotate out newspaper
+@keyframes rotateOutNewspaper {
+  to {transform: translateZ(-3000px) rotateZ(360deg); opacity: 0;}
+}
+
+//entering animations-----------------------
+//single up
+@keyframes scaleUp {
+  from {opacity: 0.3;  -webkit-transform: scale(0.8);}
+}
+
+//slide in from the right
+@keyframes sildeInRight {
+  from {transform: translateX(100%);}
+  to {transform: translateX(0);}
+}
+.ng-enter {animation: scaleUp 0.5s both ease-in; z-index: 8888;}
+.ng-leave {animation: slideOutLeft 0.5s both ease-in; z-index: 9999;}
+//.ng-enter {z-index: 8888;}
+//.ng-leave {z-index: 9999;}
+
+//page specific animations---------------------------
+//home-------------------------------
+.page-userlist.ng-enter {animation: scaleUp 0.5s both ease-in;}
+.page-userlist.ng-leave {transform-origin: 0% 0%; animation: rotateFall 1s both ease-in;}
+
+//about----------------------
+.page-signup.ng-enter {animation: sildeInRight 0.5s both ease-in;}
+.page-signup.ng-leave {animation: slideOutLeft 0.5s both ease-in;}
+
+//contact
+.page-login.ng-enter {animation: sildeInRight .5s both ease-in;}
+.page-login.ng-leave {transform-origin: 50% 50%; animation: rotateOutNewspaper .5s both ease-in;}
